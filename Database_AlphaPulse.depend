@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1388110765 source:b:\programing\workspace\cpp\database_alphapulse\intro.cpp
+1388164541 source:b:\programing\workspace\cpp\database_alphapulse\intro.cpp
 	<curses.h>
 	<windows.h>
 
@@ -25,7 +25,7 @@
 	<assert.h>
 	"logo.cpp"
 
-1388110954 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
+1388165015 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
@@ -33,7 +33,8 @@
 
 1388110940 b:\programing\workspace\cpp\database_alphapulse\database_lib.h
 
-1388110927 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
+1388165455 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
 	<curses.h>
 	<windows.h>
+	<assert.h>
 

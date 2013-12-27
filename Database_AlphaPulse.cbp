@@ -43,7 +43,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="C:/MinGW/pdcurs34/win32" />
+			<Add directory="C:/MinGW/pdcurs34" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:/MinGW/pdcurs34/win32" />
+			<Add directory="C:/MinGW/pdcurs34" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="C:\MinGW\pdcurs34\win32\pdcurses.a" />
+			<Add library="C:\MinGW\pdcurs34\win32\panel.a" />
+			<Add directory="C:/MinGW/pdcurs34/win32" />
+			<Add directory="C:/MinGW/pdcurs34" />
+		</Linker>
 		<Unit filename="database_lib.h" />
 		<Unit filename="intro.cpp" />
 		<Unit filename="logowanie.cpp" />

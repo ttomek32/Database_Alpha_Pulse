@@ -3,6 +3,9 @@
 
 void load (char* text, int line, int full){
 
+    // Ta funkcja zostala stworzona przez: Martin Winged (Winged4ever)
+    // https://github.com/Winged4Ever
+
     if (full == 1) {
 
         int length = 0, i, origin = 0;
@@ -53,13 +56,12 @@ void load (char* text, int line, int full){
             wrefresh(stdscr);
             Sleep (100);
         }
-
-
     }
 }
 
 void intro() {
 
+    curs_set(0);
     load("Wczytywanie...",23,1);
     Sleep(500);
     move(0,0);
@@ -72,7 +74,7 @@ void intro() {
 
         printw( "|                                                                              |");
         wrefresh(stdscr);
-        Sleep(50);
+        Sleep(25);
     }
 
     printw( "+------------------------------------------------------------------------------+");
@@ -128,7 +130,9 @@ void intro() {
     attron( COLOR_PAIR( 1 ) );
     init_pair( 1, COLOR_WHITE, COLOR_BLACK );
     load(" . . . Alpha Pulse . . . ",23,0);
+    attroff( COLOR_PAIR( 1 ) );
     wrefresh(stdscr);
+    curs_set(1);
     Sleep(2000);
 }
 
