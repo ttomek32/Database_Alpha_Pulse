@@ -11,7 +11,6 @@ int main (void) {
     intro();
     login();
 
-
     getch();
     endwin();
     return 0;
