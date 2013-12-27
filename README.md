@@ -24,7 +24,9 @@ która dodaje elementy graficzne w przeciwieństwie do "iostream".
 
 	
 
-<a href="http://www.mechatronik32.cba.pl" style="size:10px;">Moja strona WWW</a>	
+	<a href="http://www.mechatronik32.cba.pl">Moja strona WWW</a>
+
+	
 ====================
 
 * Nie wiadomo czy to zrobię. :(
