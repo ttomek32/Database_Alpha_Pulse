@@ -3,9 +3,9 @@ Database: Alpha Pulse
 
 This is a sample database created in C++ (Code::Blocks).
 
-![Alpha-Logo](ALogo.png "Alpha Pulse")
+	![Alpha-Logo](ALogo.png "Alpha Pulse")
 
-	Ten projekt ma pełnić rolę przykładowej bazy danych.
+Ten projekt ma pełnić rolę przykładowej bazy danych.
 Jest pisany od podstaw w jezyku C++ z użyciem biblioteki "PDcurses",
 która dodaje elementy graficzne w przeciwieństwie do "iostream".
 
@@ -24,9 +24,7 @@ która dodaje elementy graficzne w przeciwieństwie do "iostream".
 
 	
 
-	 [Moja strona WWW](http://www.mechatronik32.cba.pl)
-
-	
+<a href="http://www.mechatronik32.cba.pl">Moja strona WWW/</a>	
 ====================
 
 * Nie wiadomo czy to zrobię. :(
