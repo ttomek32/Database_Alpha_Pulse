@@ -3,31 +3,7 @@ Database: Alpha Pulse
 
 This is a sample database created in C++ (Code::Blocks).
 
-+------------------------------------------------------------------------------+
-|                                                                              |
-|                  +-------------------------------+                           |
-|                  |                               |                           |
-|                  |                               |                           |
-|                  |                               |                           |
-|                  +-------+       +-------+       |                           |
-|                          |	   |       |       |                           |
-|                          |       |       |       |                           |
-|                          |       |       |       |                           |
-|                          |       +-------+       +-------+                   |
-|                          |                               |                   |
-|                          |                               |                   |
-|                          |                               |	               |
-|                          |       +-------+       +-------+                   |
-|                          |       |       |       |                           |
-|                          |       |       |       |                           |
-|                          |       |       |       |                           |
-|                          |       |       |       +-------+                   |
-|                          |       |       |               |                   |
-|                          |       |       |               |                   |
-|                          |       |       |               |                   |
-|                          +-------+       +---------------+                   |
-|                             . . . Alpha Pulse . . .                          |
-+------------------------------------------------------------------------------+
+![Alpha-Logo](ALogo.png "Alpha Pulse")
 
 	Ten projekt ma pełnić rolę przykładowej bazy danych.
 Jest pisany od podstaw w jezyku C++ z użyciem biblioteki "PDcurses",
@@ -46,7 +22,9 @@ która dodaje elementy graficzne w przeciwieństwie do "iostream".
 		- Sortowanie użytkowników wg atrybutów*
 		- Szyfrowanie plików z hasłami i danymi* 
 
-	www.mechatronik32.cba.pl
+	
+
+	 [Moja strona WWW](http://www.mechatronik32.cba.pl)
 
 	
 ====================
