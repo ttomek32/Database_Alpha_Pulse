@@ -67,6 +67,7 @@ void login(){
         char pass[14];
         char pa[] = "admin123";
         getstr(pass);
+        echo();
         attroff( COLOR_PAIR( 1 ) );
 
         if ( strcmp ( pass, pa) == 0 ){
@@ -93,6 +94,7 @@ void login(){
             Sleep(2000);
             attroff( COLOR_PAIR( 1 ) );
             curs_set(1);
+            login();
 
         } else {
 

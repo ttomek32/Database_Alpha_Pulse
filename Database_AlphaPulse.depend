@@ -25,7 +25,7 @@
 	<assert.h>
 	"logo.cpp"
 
-1388166170 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
+1388232072 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
@@ -33,7 +33,7 @@
 
 1388166072 b:\programing\workspace\cpp\database_alphapulse\database_lib.h
 
-1388182760 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
+1388231876 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>

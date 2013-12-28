@@ -8,7 +8,7 @@ int main (void) {
     initscr();
     wclear(stdscr);
 
-    //intro();
+    intro();
     login();
 
     getch();
