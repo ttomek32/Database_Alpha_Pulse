@@ -58,7 +58,7 @@ void exityn (char* title, short color1, short color2){
             switch( i )
             {
             case 1:
-                //exit_DB(1);
+                exit_intro();
                 break;
 
             case 2:
@@ -90,4 +90,14 @@ void exityn (char* title, short color1, short color2){
     } while( e = 1 );
 
     curs_set(1);
+}
+
+void exit_intro(){
+
+    wclear(stdscr);
+    border( '|', '|', '-', '-', '+', '+', '+', '+');
+    neon("Trwa Zamykanie...",23,1);
+    wrefresh(stdscr);
+    mvprintw(9,0, "Koniec programu, przycisnij przycisk..." );
+    wrefresh(stdscr);
 }

@@ -28,33 +28,33 @@ void login(){
 
     ramka(COLOR_WHITE, COLOR_CYAN,25);// Load ramka
 
-    boxinfo("Panel logowania.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
+    boxinfo("Login panel.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
 
-    smallbox ("Podaj login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
+    smallbox ("Login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
 
     start_color();
     attron( COLOR_PAIR( 2 ) | A_BOLD );
     init_pair( 2, COLOR_WHITE, COLOR_BLUE );
     flushinp();
-    mvgetnstr(11,39,name,20);
+    mvgetnstr(11,33,name,20);
     attroff( COLOR_PAIR( 2 ) | A_BOLD );
 
     if ( strcmp ( name, username) == 0 ) {
 //    if ( strcmp ( name, szukajlogin();) == 0 ) {
 
         ramka(COLOR_WHITE, COLOR_CYAN,0);// Load ramka
-        boxinfo("Panel logowania.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
-        smallbox ("Podaj login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
+        boxinfo("Login panel.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
+        smallbox ("Login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
 
         start_color();
         attron( COLOR_PAIR( 2 ) | A_BOLD );
         init_pair( 2, COLOR_WHITE, COLOR_BLUE );
-        mvprintw(11,39,"%s",name);
+        mvprintw(11,33,"%s",name);
         attroff( COLOR_PAIR( 2 ) | A_BOLD );
 
-        smallbox ("Podaj haslo: ",3,12,23,COLOR_WHITE,COLOR_BLUE); // Load small box
+        smallbox ("Password: ",3,12,23,COLOR_WHITE,COLOR_BLUE); // Load small box
 
-        move(13,39);
+        move(13,36);
         noecho();
         getnstr(pass,16);
         echo();
@@ -65,11 +65,11 @@ void login(){
          //   if ( strcmp ( pass, szukajhaslo()) == 0 ){
 
                 curs_set(0);
-                boxinfo ("Zalogowano jako: ",8,17,20,COLOR_WHITE,COLOR_GREEN); // Load box
+                boxinfo ("Logged in as: ",10,17,20,COLOR_WHITE,COLOR_GREEN); // Load box
                 start_color();
                 attron( COLOR_PAIR( 2 ) );
                 init_pair( 2, COLOR_WHITE, COLOR_GREEN );
-                mvprintw(19,45,username);
+                mvprintw(19,44,username);
                 attroff( COLOR_PAIR( 2 ) );
                 wrefresh(stdscr);
 
@@ -79,7 +79,7 @@ void login(){
             } else {
 
                 curs_set(0);
-                boxinfo ("Podales zle haslo!",12,17,20,COLOR_WHITE,COLOR_RED); // Load small box
+                boxinfo ("You have entered a wrong password!",5,17,20,COLOR_WHITE,COLOR_RED); // Load small box
                 wrefresh(stdscr);
                 Sleep(3000);
                 curs_set(1);
@@ -90,16 +90,16 @@ void login(){
 
                 curs_set(0);
                 ramka(COLOR_WHITE, COLOR_CYAN,0);// Load ramka
-                boxinfo("Panel logowania.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
-                smallbox ("Podaj login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
+                boxinfo("Login panel.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
+                smallbox ("Login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
 
                 start_color();
                 attron( COLOR_PAIR( 2 ) | A_BOLD );
                 init_pair( 2, COLOR_WHITE, COLOR_BLUE );
-                mvprintw(11,39,"%s",name);
+                mvprintw(11,33,"%s",name);
                 attroff( COLOR_PAIR( 2 ) | A_BOLD );
 
-                boxinfo ("Nie ma takiego uzytkownika!",8,17,20,COLOR_WHITE,COLOR_RED); // Load small box
+                boxinfo ("There is no such user.",10,17,20,COLOR_WHITE,COLOR_RED); // Load small box
                 wrefresh(stdscr);
                 Sleep(3000);
                 curs_set(1);

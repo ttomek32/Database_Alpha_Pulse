@@ -12,8 +12,8 @@ int main (void) {
     login();
     menu(1);
 
-
-//  exit_DB();
+    exit_intro();
     endwin();
     return 0;
 }
+

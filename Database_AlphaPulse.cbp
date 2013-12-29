@@ -60,7 +60,7 @@
 		<Unit filename="exit.cpp" />
 		<Unit filename="gui.cpp" />
 		<Unit filename="intro.cpp" />
-		<Unit filename="logowanie.cpp" />
+		<Unit filename="login.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.cpp" />
 		<Extensions>

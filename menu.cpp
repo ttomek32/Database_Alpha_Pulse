@@ -8,20 +8,22 @@ void menu (int pozycja_menu) {
     raw();
     keypad( stdscr, TRUE );
     curs_set(0);
-    ramka(COLOR_WHITE,COLOR_CYAN,25);
+    ramka(COLOR_WHITE,COLOR_CYAN,10);
     border( '|', '|', '-', '-', '+', '+', '+', '+');
+    flushinp();
 
     noecho();
-    const char txt1[] = "- Lista uzytkownikow";
-    const char txt2[] = "- Dodaj uzytkownika";
-    const char txt3[] = "- Edytuj uzytkownika";
-    const char txt4[] = "- Usun uzytkownika";
-    const char txt5[] = "- Drukuj uzytkownikow";
-    const char txt6[] = "- Szukaj uzytkownikow";
-    const char txt7[] = "- Wyjscie";
+    const char txt1[] = "- User List";
+    const char txt2[] = "- Add a user";
+    const char txt3[] = "- Edit user";
+    const char txt4[] = "- Delete user";
+    const char txt5[] = "- Print users";
+    const char txt6[] = "- Search for user";
+    const char txt7[] = "- Exit";
 
     int i = pozycja_menu; // For position in case
     int key;  //Key is char from keyboard
+
 
     const short int min_select = 1;
     const short int max_select = 7;
@@ -193,5 +195,6 @@ void menu (int pozycja_menu) {
 
     curs_set(1);
     echo();
+    getch();
 }
 

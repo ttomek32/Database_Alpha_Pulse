@@ -4,7 +4,7 @@
 void intro();
 void login();
 void menu (int pozycja_menu);
-//void exit_DB();
+void exit_intro();
 
 void ramka(short color1, short color2, int sleep);
 void neon(char* text, int line, int full);
