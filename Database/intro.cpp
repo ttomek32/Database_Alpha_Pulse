@@ -5,7 +5,7 @@
 void intro() {
 
     curs_set(0); // cursor is off
-    neon("L O A D N I N G . . .",23,1); // load neon animation on 23 line and full
+    neon("L O A D I N G . . .",23,1); // load neon animation on 23 line and full
     Sleep(500);
 
     ramka(COLOR_WHITE, COLOR_BLACK,25); // load ramka from gui.cpp

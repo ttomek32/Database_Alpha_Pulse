@@ -3,30 +3,50 @@
 #include <assert.h>
 #include "database_lib.h"
 
-void szukajlogin(char*);
-void szukajhaslo(char*);
+int szukajlogin(char*);
+int szukajhaslo(char*);
 
-void szukajlogin(char ){
+int szukajlogin(char* name){
 
     char username[] = "admin";
+
+    if ( strcmp ( name, username) == 0 ) {
+
+        return TRUE;
+
+    } else {
+
+        return FALSE;
+
+    }
 }
 
-void szukajhaslo(char ){
+int szukajhaslo(char* pass){
 
     char haslo[] = "admin";
+
+    if ( strcmp ( pass, haslo) == 0 ) {
+
+        return TRUE;
+
+    } else {
+
+        return FALSE;
+
+    }
 }
 
+
+
 void login(){
-    // Special accounts
-    char haslo[] = "toor";
-    char username[] = "root";
-    // Don't delete this
 
     char name[14];
     char pass[14];
+    int w = 0;
+
     wclear(stdscr);
 
-    ramka(COLOR_WHITE, COLOR_CYAN,25);// Load ramka
+    ramka(COLOR_WHITE, COLOR_CYAN,0);// Load ramka
 
     boxinfo("Login panel.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
 
@@ -39,8 +59,7 @@ void login(){
     mvgetnstr(11,33,name,20);
     attroff( COLOR_PAIR( 2 ) | A_BOLD );
 
-    if ( strcmp ( name, username) == 0 ) {
-//    if ( strcmp ( name, szukajlogin();) == 0 ) {
+    if (szukajlogin(name) == TRUE) {
 
         ramka(COLOR_WHITE, COLOR_CYAN,0);// Load ramka
         boxinfo("Login panel.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
@@ -61,15 +80,14 @@ void login(){
         //mvprintw(13,39,"*******"); // Not now
         attroff( COLOR_PAIR( 1 ) );
 
-            if ( strcmp ( pass, haslo) == 0 ) {
-         //   if ( strcmp ( pass, szukajhaslo()) == 0 ){
+        if (szukajhaslo(pass) == TRUE) {
 
                 curs_set(0);
                 boxinfo ("Logged in as: ",10,17,20,COLOR_WHITE,COLOR_GREEN); // Load box
                 start_color();
                 attron( COLOR_PAIR( 2 ) );
                 init_pair( 2, COLOR_WHITE, COLOR_GREEN );
-                mvprintw(19,44,username);
+                mvprintw(19,44,name);
                 attroff( COLOR_PAIR( 2 ) );
                 wrefresh(stdscr);
 
@@ -81,7 +99,7 @@ void login(){
                 curs_set(0);
                 boxinfo ("You have entered a wrong password!",5,17,20,COLOR_WHITE,COLOR_RED); // Load small box
                 wrefresh(stdscr);
-                Sleep(3000);
+                Sleep(1000);
                 curs_set(1);
                 login();
             }
@@ -101,7 +119,7 @@ void login(){
 
                 boxinfo ("There is no such user.",10,17,20,COLOR_WHITE,COLOR_RED); // Load small box
                 wrefresh(stdscr);
-                Sleep(3000);
+                Sleep(1000);
                 curs_set(1);
                 login();
         }

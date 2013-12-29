@@ -10,9 +10,9 @@ Jest pisany od podstaw w jezyku C++ z użyciem biblioteki "PDcurses",
 która dodaje elementy graficzne w przeciwieństwie do "iostream".
 
 		Planowane elementy:
-			- Intro
-			- Panel logowania
-			- Menu dynamiczne
+			+ Intro
+			+ Panel logowania
+			+ Menu dynamiczne
 			- Wyświetlanie użytkowników
 			- Dodawanie użytkownika
 			- Edycja użytkownika
@@ -23,9 +23,6 @@ która dodaje elementy graficzne w przeciwieństwie do "iostream".
 			- Szyfrowanie plików z hasłami i danymi* 
 
 	
-
-<a href="http://www.mechatronik32.cba.pl">Moja strona WWW</a>
-	
 ====================
 
-* Nie wiadomo czy to zrobię. :(
+<a href="http://www.mechatronik32.cba.pl">Moja strona WWW</a>
