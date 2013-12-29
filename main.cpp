@@ -10,8 +10,10 @@ int main (void) {
 
     intro();
     login();
+    menu(1);
 
-    getch();
+
+//  exit_DB();
     endwin();
     return 0;
 }

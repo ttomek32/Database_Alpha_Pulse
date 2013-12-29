@@ -57,9 +57,12 @@
 			<Add directory="C:/MinGW/pdcurs34" />
 		</Linker>
 		<Unit filename="database_lib.h" />
+		<Unit filename="exit.cpp" />
+		<Unit filename="gui.cpp" />
 		<Unit filename="intro.cpp" />
 		<Unit filename="logowanie.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

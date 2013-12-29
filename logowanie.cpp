@@ -1,151 +1,108 @@
 #include <curses.h>
 #include <windows.h>
 #include <assert.h>
+#include "database_lib.h"
 
-void username(char* name){
-    name = "admin";
+void szukajlogin(char*);
+void szukajhaslo(char*);
+
+void szukajlogin(char ){
+
+    char username[] = "admin";
 }
-void checkpass(){}
+
+void szukajhaslo(char ){
+
+    char haslo[] = "admin";
+}
 
 void login(){
+    // Special accounts
+    char haslo[] = "toor";
+    char username[] = "root";
+    // Don't delete this
 
-    move(0,0);
-    printw( "+------------------------------------------------------------------------------+");
-    wrefresh(stdscr);
+    char name[14];
+    char pass[14];
+    wclear(stdscr);
 
-    int i;
-    for (i=0;i<23;i++){
+    ramka(COLOR_WHITE, COLOR_CYAN,25);// Load ramka
 
-        printw( "|                                                                              |");
-        wrefresh(stdscr);
-        Sleep(25);
-    }
+    boxinfo("Panel logowania.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
 
-    printw( "+------------------------------------------------------------------------------+");
-    wrefresh(stdscr);
+    smallbox ("Podaj login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
 
     start_color();
-    attron( COLOR_PAIR( 1 ) );
-    init_pair( 1, COLOR_WHITE, COLOR_BLUE );
+    attron( COLOR_PAIR( 2 ) | A_BOLD );
+    init_pair( 2, COLOR_WHITE, COLOR_BLUE );
+    flushinp();
+    mvgetnstr(11,39,name,20);
+    attroff( COLOR_PAIR( 2 ) | A_BOLD );
 
-    move(6, 23);
-    printw( "#=======================[?][_][X]");
-    move(7,23);
-    printw( "#        Panel logowania.       #");
-    move(8, 23);
-    printw( "#===============================#");
-    move(9, 24);
-    printw( "|                             |");
-    move(10,24);
-    printw( "| Podaj login:                |");
-    move(11, 24);
-    printw( "|                             |");
-    move(12, 24);
-    printw( "|_____________________________|");
-    wrefresh(stdscr);
+    if ( strcmp ( name, username) == 0 ) {
+//    if ( strcmp ( name, szukajlogin();) == 0 ) {
 
-    move(10,39);
-    raw();
-    nonl();
-    keypad(stdscr, FALSE);
-    char name[14];
-    char us[] = "admin";
-    attron(A_BOLD);
-    getstr(name);
-    attroff(A_BOLD);
+        ramka(COLOR_WHITE, COLOR_CYAN,0);// Load ramka
+        boxinfo("Panel logowania.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
+        smallbox ("Podaj login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
 
-    if ( strcmp ( name, us) == 0 ) {
-
-        move(12, 24);
-        printw( "| Haslo:                      |");
-        move(13, 24);
-        printw( "|_____________________________|");
-        wrefresh(stdscr);
-
-        move(12,33);
-        noecho();
-        char pass[14];
-        char pa[] = "admin123";
-        getstr(pass);
-        echo();
-        attroff( COLOR_PAIR( 1 ) );
-
-        if ( strcmp ( pass, pa) == 0 ){
-
-            attroff( COLOR_PAIR( 1 ) );
-            start_color();
-            attron( COLOR_PAIR( 1 ) );
-            init_pair( 1, COLOR_WHITE, COLOR_GREEN );
-
-            curs_set(0);
-            move(15,22);
-            printw( "#=========================[?][_][X]");
-            move(16,22);
-            printw( "#                                 #");
-            move(17,22);
-            printw( "#  Zalogowano jako:               #");
-            move(17,42);
-            printw( us );
-            move(18,22);
-            printw( "#                                 #");
-            move(19,22);
-            printw( "#=================================#");
-            wrefresh(stdscr);
-            Sleep(2000);
-            attroff( COLOR_PAIR( 1 ) );
-            curs_set(1);
-            login();
-
-        } else {
-
-            attroff( COLOR_PAIR( 1 ) );
-            start_color();
-            attron( COLOR_PAIR( 1 ) );
-            init_pair( 1, COLOR_WHITE, COLOR_RED );
-
-            curs_set(0);
-            move(15,22);
-            printw( "#=========================[?][_][X]");
-            move(16,22);
-            printw( "#                                 #");
-            move(17,22);
-            printw( "#        Podales zle haslo!       #");
-            move(18,22);
-            printw( "#                                 #");
-            move(19,22);
-            printw( "#=================================#");
-            wrefresh(stdscr);
-            Sleep(2000);
-            attroff( COLOR_PAIR( 1 ) );
-            curs_set(1);
-            login();
-
-        };
-
-    } else  {
-
-        attroff( COLOR_PAIR( 1 ) );
         start_color();
-        attron( COLOR_PAIR( 1 ) );
-        init_pair( 1, COLOR_WHITE, COLOR_RED );
+        attron( COLOR_PAIR( 2 ) | A_BOLD );
+        init_pair( 2, COLOR_WHITE, COLOR_BLUE );
+        mvprintw(11,39,"%s",name);
+        attroff( COLOR_PAIR( 2 ) | A_BOLD );
 
-        curs_set(0);
-        move(15,22);
-        printw( "#=========================[?][_][X]");
-        move(16,22);
-        printw( "#                                 #");
-        move(17,22);
-        printw( "#   Nie ma takiego uzytkownika!   #");
-        move(18,22);
-        printw( "#                                 #");
-        move(19,22);
-        printw( "#=================================#");
-        wrefresh(stdscr);
-        Sleep(2000);
+        smallbox ("Podaj haslo: ",3,12,23,COLOR_WHITE,COLOR_BLUE); // Load small box
+
+        move(13,39);
+        noecho();
+        getnstr(pass,16);
+        echo();
+        //mvprintw(13,39,"*******"); // Not now
         attroff( COLOR_PAIR( 1 ) );
-        curs_set(1);
-        login();
-    }
 
-    getch();
+            if ( strcmp ( pass, haslo) == 0 ) {
+         //   if ( strcmp ( pass, szukajhaslo()) == 0 ){
+
+                curs_set(0);
+                boxinfo ("Zalogowano jako: ",8,17,20,COLOR_WHITE,COLOR_GREEN); // Load box
+                start_color();
+                attron( COLOR_PAIR( 2 ) );
+                init_pair( 2, COLOR_WHITE, COLOR_GREEN );
+                mvprintw(19,45,username);
+                attroff( COLOR_PAIR( 2 ) );
+                wrefresh(stdscr);
+
+                Sleep(2000);
+                curs_set(1);
+
+            } else {
+
+                curs_set(0);
+                boxinfo ("Podales zle haslo!",12,17,20,COLOR_WHITE,COLOR_RED); // Load small box
+                wrefresh(stdscr);
+                Sleep(3000);
+                curs_set(1);
+                login();
+            }
+
+        } else  {
+
+                curs_set(0);
+                ramka(COLOR_WHITE, COLOR_CYAN,0);// Load ramka
+                boxinfo("Panel logowania.",13,5,20,COLOR_WHITE,COLOR_BLUE); // Load box info
+                smallbox ("Podaj login: ",3,10,23,COLOR_WHITE,COLOR_BLUE); // Load small box
+
+                start_color();
+                attron( COLOR_PAIR( 2 ) | A_BOLD );
+                init_pair( 2, COLOR_WHITE, COLOR_BLUE );
+                mvprintw(11,39,"%s",name);
+                attroff( COLOR_PAIR( 2 ) | A_BOLD );
+
+                boxinfo ("Nie ma takiego uzytkownika!",8,17,20,COLOR_WHITE,COLOR_RED); // Load small box
+                wrefresh(stdscr);
+                Sleep(3000);
+                curs_set(1);
+                login();
+        }
 }

@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1388164541 source:b:\programing\workspace\cpp\database_alphapulse\intro.cpp
+1388262243 source:b:\programing\workspace\cpp\database_alphapulse\intro.cpp
 	<curses.h>
 	<windows.h>
+	"database_lib.h"
 
 1216120406 c:\mingw\pdcurs34\curses.h
 	<stdarg.h>
@@ -25,16 +26,34 @@
 	<assert.h>
 	"logo.cpp"
 
-1388232072 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
+1388277322 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
 	"database_lib.h"
 
-1388166072 b:\programing\workspace\cpp\database_alphapulse\database_lib.h
+1388277352 b:\programing\workspace\cpp\database_alphapulse\database_lib.h
 
-1388231876 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
+1388264569 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
+	"database_lib.h"
+
+1388275458 source:b:\programing\workspace\cpp\database_alphapulse\gui.cpp
+	<curses.h>
+	<windows.h>
+	"database_lib.h"
+
+1388276478 source:b:\programing\workspace\cpp\database_alphapulse\menu.cpp
+	<curses.h>
+	<windows.h>
+	<assert.h>
+	"database_lib.h"
+
+1388277335 source:b:\programing\workspace\cpp\database_alphapulse\exit.cpp
+	<curses.h>
+	<windows.h>
+	<assert.h>
+	"database_lib.h"
 
