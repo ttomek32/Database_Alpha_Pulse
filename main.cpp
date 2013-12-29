@@ -10,9 +10,8 @@ int main (void) {
 
     intro();
     login();
-    menu(1);
 
-    exit_intro();
+    menu(1);
     endwin();
     return 0;
 }

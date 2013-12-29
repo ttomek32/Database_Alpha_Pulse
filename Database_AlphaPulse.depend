@@ -26,7 +26,7 @@
 	<assert.h>
 	"logo.cpp"
 
-1388322550 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
+1388346156 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
@@ -40,21 +40,22 @@
 	<assert.h>
 	"database_lib.h"
 
-1388275458 source:b:\programing\workspace\cpp\database_alphapulse\gui.cpp
+1388343948 source:b:\programing\workspace\cpp\database_alphapulse\gui.cpp
 	<curses.h>
 	<windows.h>
 	"database_lib.h"
 
-1388322538 source:b:\programing\workspace\cpp\database_alphapulse\menu.cpp
+1388345285 source:b:\programing\workspace\cpp\database_alphapulse\menu.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
 	"database_lib.h"
 
-1388321489 source:b:\programing\workspace\cpp\database_alphapulse\exit.cpp
+1388346595 source:b:\programing\workspace\cpp\database_alphapulse\exit.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
+	<cstdlib>
 	"database_lib.h"
 
 1388322057 source:b:\programing\workspace\cpp\database_alphapulse\login.cpp

@@ -49,14 +49,14 @@ void boxmenu (char* text, char* text1 ,int pos ,int pos1 ,int line, int column, 
     attron( COLOR_PAIR( 2 ) );
     init_pair( 2, color1, color2 );
 
-    mvprintw(line,column,       "***********************************************");
+    mvprintw(line,column,       "* * * * * * * * * * * * * * * * * * * * * * * *");
     mvprintw(line + 1,column,   "*                                             *");
     mvprintw(line + 2,column,   "*                                             *");
     mvprintw(line + 2,column + pos,"%s",text);
     mvprintw(line + 3,column,   "*                                             *");
     mvprintw(line + 3,column + pos1,"%s",text1);
     mvprintw(line + 4,column,   "*                                             *");
-    mvprintw(line + 5,column,   "***********************************************");
+    mvprintw(line + 5,column,   "* * * * * * * * * * * * * * * * * * * * * * * *");
 
     wrefresh(stdscr);
     attroff( COLOR_PAIR( 2 ) );

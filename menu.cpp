@@ -8,7 +8,7 @@ void menu (int pozycja_menu) {
     raw();
     keypad( stdscr, TRUE );
     curs_set(0);
-    ramka(COLOR_WHITE,COLOR_CYAN,10);
+    ramka(COLOR_WHITE,COLOR_CYAN,1);
     border( '|', '|', '-', '-', '+', '+', '+', '+');
     flushinp();
 
@@ -25,6 +25,7 @@ void menu (int pozycja_menu) {
     int key;  //Key is char from keyboard
 
 
+
     const short int min_select = 1;
     const short int max_select = 7;
 
@@ -32,8 +33,7 @@ void menu (int pozycja_menu) {
     int line = 5;
     int column = 8;
 
-   do
-    {
+   while( i <= 9) {
         if( (key == 'w' or key == KEY_UP) && i != min_select )
         {
             i--;
@@ -88,7 +88,7 @@ void menu (int pozycja_menu) {
             boxmenu ( "DRUKUJ UZYTKOWNIK(A)/OW", "Pozwala na wydrukowanie danego uzytkownika." ,3 ,3 ,15, 29, COLOR_YELLOW, COLOR_BLUE);
         }
         else if (i == 6) {
-            boxmenu ( "SZUKAJ UZYTKOWNIKA", "Pozwala na znalezienie danego uzytkownika." ,3 ,3 ,29, 33, COLOR_YELLOW, COLOR_BLUE);
+            boxmenu ( "SZUKAJ UZYTKOWNIKA", "Pozwala na znalezienie danego uzytkownika." ,3 ,3 ,15, 29, COLOR_YELLOW, COLOR_BLUE);
         }
         else if (i == 7) {
             boxmenu ( "WYJSCIE", "Wyjscie z programu." ,3 ,3 ,15, 29, COLOR_YELLOW, COLOR_BLUE);
@@ -186,15 +186,16 @@ void menu (int pozycja_menu) {
             break;
 
         }
+
         mvprintw(22,6,"Use arrow or W/S to move in menu. Press ENTER if you choose options.");
         attroff( COLOR_PAIR( 2 ) );
         mvprintw(24,15," (C) 2013-2014, Thomas Martin. All rights reserved. ");
         key = getch();
 
-    } while( 1 );
+    }
 
     curs_set(1);
     echo();
-    getch();
+
 }
 

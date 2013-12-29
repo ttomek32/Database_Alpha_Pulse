@@ -1,6 +1,7 @@
 #include <curses.h>
 #include <windows.h>
 #include <assert.h>
+#include <cstdlib>
 #include "database_lib.h"
 
 
@@ -94,10 +95,17 @@ void exityn (char* title, short color1, short color2){
 
 void exit_intro(){
 
+    start_color();
+    attron( COLOR_PAIR( 2 ) );
+    init_pair( 2, COLOR_WHITE, COLOR_BLACK );
+
     wclear(stdscr);
     border( '|', '|', '-', '-', '+', '+', '+', '+');
-    neon("Trwa Zamykanie...",23,1);
+    neon("E x i t i n g . . .",23,1);
     wrefresh(stdscr);
-    mvprintw(9,0, "Koniec programu, przycisnij przycisk..." );
+    mvprintw(9,5, "The program was terminated. You can safely leave the consoles." );
+    mvprintw(10,5, "Press any key ..." );
     wrefresh(stdscr);
+    attroff( COLOR_PAIR( 2 ) );
+    exit(0);
 }
