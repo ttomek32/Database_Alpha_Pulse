@@ -100,7 +100,7 @@ void exit_intro(){
     init_pair( 2, COLOR_WHITE, COLOR_BLACK );
 
     wclear(stdscr);
-    border( '|', '|', '-', '-', '+', '+', '+', '+');
+    border( 179, 179, 196, 196, 218, 191, 192, 217);
     neon("E x i t i n g . . .",23,1);
     wrefresh(stdscr);
     mvprintw(9,5, "The program was terminated. You can safely leave the consoles." );

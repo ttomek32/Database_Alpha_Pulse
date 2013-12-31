@@ -26,13 +26,15 @@
 	<assert.h>
 	"logo.cpp"
 
-1388346813 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
+1388506903 source:b:\programing\workspace\cpp\database_alphapulse\main.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
+	<fstream>
+	<stdlib.h>
 	"database_lib.h"
 
-1388320580 b:\programing\workspace\cpp\database_alphapulse\database_lib.h
+1388506597 b:\programing\workspace\cpp\database_alphapulse\database_lib.h
 
 1388322057 source:b:\programing\workspace\cpp\database_alphapulse\logowanie.cpp
 	<curses.h>
@@ -40,27 +42,36 @@
 	<assert.h>
 	"database_lib.h"
 
-1388343948 source:b:\programing\workspace\cpp\database_alphapulse\gui.cpp
+1388507148 source:b:\programing\workspace\cpp\database_alphapulse\gui.cpp
 	<curses.h>
 	<windows.h>
 	"database_lib.h"
 
-1388345285 source:b:\programing\workspace\cpp\database_alphapulse\menu.cpp
+1388508591 source:b:\programing\workspace\cpp\database_alphapulse\menu.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
 	"database_lib.h"
 
-1388346595 source:b:\programing\workspace\cpp\database_alphapulse\exit.cpp
+1388506921 source:b:\programing\workspace\cpp\database_alphapulse\exit.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
 	<cstdlib>
 	"database_lib.h"
 
-1388322057 source:b:\programing\workspace\cpp\database_alphapulse\login.cpp
+1388506705 source:b:\programing\workspace\cpp\database_alphapulse\login.cpp
 	<curses.h>
 	<windows.h>
 	<assert.h>
+	<fstream>
+	"database_lib.h"
+
+1388511675 source:b:\programing\workspace\cpp\database_alphapulse\userlist.cpp
+	<curses.h>
+	<windows.h>
+	<fstream>
+	<string>
+	<stdlib.h>
 	"database_lib.h"
 

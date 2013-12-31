@@ -4,9 +4,12 @@
 
 void ramka(short color1, short color2,int sleep){
 
+    border( 179, 179, 196, 196, 218, 191, 192, 217);
+
     start_color();
     attron( COLOR_PAIR( 1 ) );
     init_pair( 1, color1, color2 );
+
     mvprintw(0,0,"+------------------------------------------------------------------------------+");
     wrefresh(stdscr);
 
@@ -19,6 +22,20 @@ void ramka(short color1, short color2,int sleep){
     }
 
     printw( "+------------------------------------------------------------------------------+");
+    mvprintw(24,14," (C) 2013-2014, Thomas Martin. All rights reserved. ");
+    wrefresh(stdscr);
+    attroff( COLOR_PAIR( 1 ) );
+
+}
+
+void ramka2(short color1, short color2,int sleep){
+
+    start_color();
+    attron( COLOR_PAIR( 1 ) );
+    init_pair( 1, color1, color2 );
+
+    border( 179, 179, 196, 196, 218, 191, 192, 217);
+
     mvprintw(24,14," (C) 2013-2014, Thomas Martin. All rights reserved. ");
     wrefresh(stdscr);
     attroff( COLOR_PAIR( 1 ) );
@@ -225,3 +242,34 @@ void neon (char* text, int line, int full){
         }
     }
 }
+
+void ulist(int line,int column,short color1,short color2){
+
+    wclear(stdscr);
+
+    start_color();
+    attron( COLOR_PAIR( 1 ) );
+    init_pair( 1, color1, color2 );
+
+    mvprintw(line,column,"                                                                                  ");
+    mvprintw(line+1,column," +----------------------------------------------------------------------------+ ");
+    wrefresh(stdscr);
+
+    int i;
+    for (i=0;i<21;i++){
+
+        printw( " |                                                                            | ");
+        wrefresh(stdscr);
+    }
+
+    printw( " +----------------------------------------------------------------------------+ ");
+    mvprintw(i+3,column,"                                                                                ");
+    mvprintw(24,14," (C) 2013-2014, Thomas Martin. All rights reserved. ");
+    wrefresh(stdscr);
+
+    attroff( COLOR_PAIR( 1 ) );
+
+
+
+}
+
