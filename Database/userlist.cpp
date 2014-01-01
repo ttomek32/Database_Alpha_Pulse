@@ -38,24 +38,25 @@ void userlist(){
 
         }
 
-        ifstream plik("database.dat");
+    ifstream plik("database.dat");
 
     if(plik)
     {
 
         string linia;
         const char *cstr = linia.c_str();
-
+        int i = 4;
         while(getline(plik, linia))
         {
             const char *cstr = linia.c_str();
-            mvprintw(4,4,"%s",cstr);
-            mvprintw(6,4,"%s",cstr);
+            mvprintw(i,4,"%s",cstr);
+            i = i+2;
+
         }
     }
     else
     {
-        mvprintw(2,1,"B£¥D: nie mo¿na otworzyæ pliku do odczytu.");
+        mvprintw(2,1,"Error: File not found.");
     }
 
         key = getch();

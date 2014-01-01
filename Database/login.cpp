@@ -2,6 +2,8 @@
 #include <windows.h>
 #include <assert.h>
 #include <fstream>
+#include <string>
+#include <stdlib.h>
 #include "database_lib.h"
 
 int szukajlogin(char*);
@@ -9,30 +11,70 @@ int szukajhaslo(char*);
 
 int szukajlogin(char* username){
 
-    char name[] = "admin";
+    std::fstream acc("accounts.dat");
 
-    if (strcmp(username, name) == 0) {
+    if(acc.is_open())
+    {
+        std::string login;
 
-		return TRUE;
+        while ( !acc.eof( )){
 
-	} else {
+            getline(acc, login);
+            std::string::size_type pos = login.find(username);
 
-		return FALSE;
-	}
+            if(pos != std::string::npos) {
+
+                return TRUE;
+
+            } else {
+
+                continue;
+            }
+        }
+
+        if (acc.eof()) {
+
+            return FALSE;
+        }
+
+    } else {
+        mvprintw(2,1,"Error: File not found.");
+        return FALSE;
+    }
 }
 
 int szukajhaslo(char* pass){
 
-    char haslo[] = "admin";
+    std::fstream acc("accounts.dat");
 
-    if (strcmp(pass, haslo) == 0) {
+    if(acc.is_open())
+    {
+        std::string haslo;
 
-		return TRUE;
+        while ( !acc.eof( )){
 
-	} else {
+            getline(acc, haslo);
+            std::string::size_type pos = haslo.find(pass);
 
-		return FALSE;
-	}
+            if(pos != std::string::npos) {
+
+                return TRUE;
+
+            } else {
+
+                continue;
+            }
+        }
+
+        if (acc.eof()) {
+
+            return FALSE;
+        }
+
+    } else {
+        mvprintw(2,1,"Error: File not found.");
+        return FALSE;
+    }
 }
 
 void login(){
