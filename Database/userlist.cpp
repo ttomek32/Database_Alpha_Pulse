@@ -14,10 +14,10 @@ void userlist(){
     curs_set(0);
     wclear(stdscr);
     int key;
-    //int w = 0;
     ulist(0,0,COLOR_BLACK,COLOR_MENUTEXT);
 
-    while (key <= 21){
+    do {
+
 
         start_color();
         attron( COLOR_PAIR( 2 ) );
@@ -28,40 +28,40 @@ void userlist(){
 
         int i;
 
-        for (i=4;i<=22;i++){
+            for (i=4;i<=22;i++){
 
-            mvprintw(i,3,  "        |                |               |           |           |         ");
-            mvprintw(i+1,3,"--------+----------------+---------------+-----------+-----------+---------");
-            mvprintw(0,14," ESC = Exit to menu. Use arrow or W/S to move in menu. ");
-            wrefresh(stdscr);
-            i = i + 1;
+                mvprintw(i,3,  "        |                |               |           |           |         ");
+                mvprintw(i+1,3,"--------+----------------+---------------+-----------+-----------+---------");
+                mvprintw(0,14," ESC = Exit to menu. Use arrow or W/S to move in list. ");
+                wrefresh(stdscr);
+                i = i + 1;
 
-        }
+            }
 
-    ifstream plik("database.dat");
+            ifstream plik("database.dat");
 
-    if(plik)
-    {
+            if(plik) {
 
-        string linia;
-        const char *cstr = linia.c_str();
-        int i = 4;
-        while(getline(plik, linia))
-        {
-            const char *cstr = linia.c_str();
-            mvprintw(i,4,"%s",cstr);
-            i = i+2;
+                string linia;
+                const char *cstr = linia.c_str();
+                int i = 4;
+                while(getline(plik, linia)) {
 
-        }
-    }
-    else
-    {
-        mvprintw(2,1,"Error: File not found.");
-    }
+                    const char *cstr = linia.c_str();
+                    mvprintw(i,6,"%s",cstr);
+                    i = i+2;
 
-        key = getch();
-    }
+                }
 
+            } else {
+
+                mvprintw(2,1,"Error: File not found.");
+
+            }
+
+            key = getch();
+
+    } while( key != VK_ESCAPE );
 
     attroff( COLOR_PAIR( 2 ) );
     curs_set(1);

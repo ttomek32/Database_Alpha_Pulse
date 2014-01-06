@@ -63,6 +63,8 @@
 		<Unit filename="login.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.cpp" />
+		<Unit filename="print.cpp" />
+		<Unit filename="search.cpp" />
 		<Unit filename="userlist.cpp" />
 		<Extensions>
 			<code_completion />

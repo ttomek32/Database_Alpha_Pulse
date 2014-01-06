@@ -50,6 +50,29 @@ void menu (int pozycja_menu) {
                 ramka(COLOR_WHITE,COLOR_CYAN,1);
                 ramka2(COLOR_WHITE, COLOR_CYAN,0);
                 flushinp();
+                curs_set(0);
+
+            }
+
+        if( key == 13 and i == 5 ) {
+
+                print();
+                wclear(stdscr);
+                ramka(COLOR_WHITE,COLOR_CYAN,1);
+                ramka2(COLOR_WHITE, COLOR_CYAN,0);
+                flushinp();
+                curs_set(0);
+
+            }
+
+        if( key == 13 and i == 6 ) {
+
+                search_u();
+                wclear(stdscr);
+                ramka(COLOR_WHITE,COLOR_CYAN,1);
+                ramka2(COLOR_WHITE, COLOR_CYAN,0);
+                flushinp();
+                curs_set(0);
 
             }
 
@@ -58,7 +81,6 @@ void menu (int pozycja_menu) {
             switch( i ) {
 
             case 1:
-
                 break;
             case 2:
                 mvprintw( 1, 1, "Opcja 2" );
@@ -70,10 +92,8 @@ void menu (int pozycja_menu) {
                 mvprintw( 1, 1, "Opcja 4" );
                 break;
             case 5:
-                mvprintw( 1, 1, "Opcja 5" );
                 break;
             case 6:
-                mvprintw( 1, 1, "Opcja 6" );
                 break;
             case 7:
                 exityn (" Do you want exit? ", COLOR_WHITE, COLOR_RED);

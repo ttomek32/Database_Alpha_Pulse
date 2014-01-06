@@ -5,7 +5,9 @@ void intro();
 void login();
 void menu (int pozycja_menu);
 void userlist();
+void search_u();
 void exit_intro();
+void print ();
 
 void ramka(short color1, short color2, int sleep);
 void ramka2(short color1, short color2,int sleep);
